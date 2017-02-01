@@ -21,9 +21,20 @@ public class MainActivity extends AppCompatActivity {
         addseparator();
 
         initBarang();
-        showStrig += arrBarang[5].toString();
-        addseparator();
-        showStrig += arrBarang[2].toString();
+//        showStrig += arrBarang[5].toString();
+//        addseparator();
+//       showStrig += arrBarang[2].toString();
+//        showText.setText(showStrig);
+
+        Transaksi trans1 = new Transaksi();
+        trans1.addBarang(arrBarang[3]);
+        trans1.addBarang(arrBarang[5]);
+        trans1.addBarang(arrBarang[2]);
+        showStrig += trans1.printTransaksi();
+        showStrig += "rata-rata harga barang yang dibeli: "+
+                trans1.averageTransaksi();
+        showStrig += "\n+"+trans1.maxBarang();
+
         showText.setText(showStrig);
     }
     public void addseparator(){
