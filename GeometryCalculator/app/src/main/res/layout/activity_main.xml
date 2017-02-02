@@ -54,13 +54,34 @@
         android:text="lebar"/>
 
 
+    <EditText
+        android:id="@+id/input3"
+        android:layout_below="@id/input2"
+        android:layout_alignParentRight="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>/>
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_below="@id/input2"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/input3"
+        android:gravity="center_vertical"
+        android:text="lebar"/>
+
+
+
     <Button
         android:id="@+id/btn_calc"
-        android:layout_below="@id/input2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hitung"
-        android:onClick="calculate"/>
+        android:onClick="calculate"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/result"

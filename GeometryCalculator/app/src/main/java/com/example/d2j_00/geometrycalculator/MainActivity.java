@@ -27,14 +27,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void calculate(View view){
         EditText input1 = (EditText) findViewById(R.id.input1);
         EditText input2 = (EditText) findViewById(R.id.input2);
+        EditText input3 = (EditText) findViewById(R.id.input3);
         Spinner spinner = (Spinner) findViewById(R.id.geometry);
-        double inp2 = 0 , inp1 = 0;
+        double inp2 = 0 , inp1 = 0 , inp3;
         String operator = spinner.getSelectedItem().toString();
         String hasil = "";
         inp1 = Double.parseDouble(input1.getText().toString());
         if (input2.isEnabled()){
              inp2 = Double.parseDouble(input2.getText().toString());
         }
+        if (input3.isEnabled()){
+            inp3 = Double.parseDouble(input3.getText().toString());
 
         if(operator.equalsIgnoreCase("Lingkaran")){
             hasil = "Luas dari Lingkaran adalah : "+(Math.PI * (inp1*inp1))+"\n";
@@ -43,6 +46,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             hasil = "Luas dari Segitiga adalah : "+(0.5*(inp1*inp2))+"\n";
             double hyp = Math.sqrt((inp1*inp2) + (inp1*inp2));
             hasil += "Keliling dari Segitiga adalah : "+(inp1+inp2+hyp);
+        }else if(operator.equalsIgnoreCase("balok")){
+            hasil = "Luas dari Balok adalah : "+2*((inp1*inp2)+(inp1*inp3)+(inp2*inp3))+"\n";
+            hasil += "Volume dari Balok adalah : "+(inp1 * inp2 * inp3);
+        }else if(operator.equalsIgnoreCase("bola")){
+            hasil = "Luas dari Segitiga adalah : "+4 (Math.PI * inp1 * inp1)+"\n";
+            hasil += "Keliling dari Segitiga adalah : "+4/3(Math.PI* inp1 * inp1 * inp1);
         }else {
             hasil = "Luas dari Persegi adalah : "+(inp1*inp2)+"\n";
             hasil += "Keliling dari Persegi adalah : "+((2*inp1)+(2*inp2));
