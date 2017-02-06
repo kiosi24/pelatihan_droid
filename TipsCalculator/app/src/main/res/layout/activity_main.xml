@@ -7,38 +7,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.d2j_00.geometrycalculator.MainActivity">
+    tools:context="com.example.d2j_00.tipscalculator.MainActivity">
 
-    <Spinner
-        android:id="@+id/geometry"
-        android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"> </Spinner>
     <EditText
         android:id="@+id/input1"
-        android:layout_below="@id/geometry"
-        android:layout_alignParentRight="true"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"/>
+
     <TextView
-        android:id="@+id/txt1"
-        android:layout_below="@id/geometry"
-        android:layout_alignParentLeft="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/input1"
-        android:textStyle="bold"
-        android:gravity="center_vertical"
-        android:text="Panjang"/>
+        android:text="Tagihan"
+        android:textStyle="bold"/>
+
+
     <EditText
         android:id="@+id/input2"
         android:layout_below="@id/input1"
         android:layout_alignParentRight="true"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"/>
-
+        android:inputType="numberDecimal" />
     <TextView
         android:id="@+id/txt2"
         android:layout_below="@id/input1"
@@ -48,26 +38,25 @@
         android:layout_alignBottom="@id/input2"
         android:textStyle="bold"
         android:gravity="center_vertical"
-        android:text="Lebar"/>
+        android:text="Persen Tip"/>
+
     <EditText
         android:id="@+id/input3"
-        android:layout_below="@id/input2"
+        android:layout_below="@+id/input2"
         android:layout_alignParentRight="true"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"/>
-
     <TextView
         android:id="@+id/txt3"
-        android:layout_below="@id/input2"
+        android:layout_below="@+id/input2"
         android:layout_alignParentLeft="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/input3"
         android:textStyle="bold"
         android:gravity="center_vertical"
-        android:text="Tinggi"/>
-
+        android:text="Jumlah Orang"/>
 
     <Button
         android:id="@+id/btn_calc"
@@ -80,8 +69,9 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-    android:id="@+id/result"
-    android:layout_below="@id/btn_calc"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+        android:id="@+id/result"
+        android:layout_below="@id/btn_calc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
