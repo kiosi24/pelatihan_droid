@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_receipt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="16dp"
+    android:stretchColumns="0"
+    tools:context="com.example.d2j_00.shopreceipt.ReceiptActivity">
+
+
+    <TableRow>
+        <TextView
+            android:text="Key Board"/>
+        <TextView
+            android:id="@+id/key2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/key2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Mouse"/>
+        <TextView
+            android:id="@+id/mouse2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/mouse2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Joy Stick"/>
+        <TextView
+            android:id="@+id/joy2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/joy2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Headset"/>
+        <TextView
+            android:id="@+id/head2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/head2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="CCTV"/>
+        <TextView
+            android:id="@+id/cctv2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/cctv2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Hardisk"/>
+        <TextView
+            android:id="@+id/hard2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/hard2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow
+        android:background="@color/LightGray"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Total Pembelian"
+            android:layout_span="2"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/grand_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+    </TableRow>
+
+</TableLayout>

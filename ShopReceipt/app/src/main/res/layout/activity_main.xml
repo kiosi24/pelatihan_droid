@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="16dp"
+    android:stretchColumns="0"
+    tools:context="com.example.d2j_00.shopreceipt.MainActivity">
+
+    <TableRow>
+        <TextView android:text="Key Board" />
+        <EditText android:id="@+id/key_num"
+            android:layout_width="100dp" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Mouse" />
+        <EditText android:id="@+id/mouse_num" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Joy Stick" />
+        <EditText android:id="@+id/joy_num" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Headset" />
+        <EditText android:id="@+id/head_num" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="CCTV" />
+        <EditText android:id="@+id/cctv_num" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Hardisk" />
+        <EditText android:id="@+id/hard_num" />
+    </TableRow>
+    <TableRow>
+        <Button android:text="Cetak Faktur"
+            android:layout_span="2"
+            android:onClick="printReceipt"/>
+    </TableRow>
+
+</TableLayout>
