@@ -27,7 +27,7 @@ public class TambahActivity extends AppCompatActivity  {
         spinner.setAdapter(adapter);
     }
 
-    public void addFilm(View view){
+    public void tambahfilm(View view){
         String title = ((EditText)findViewById(R.id.inpjudul)).getText().toString();
         int year = Integer.parseInt(((EditText)findViewById(R.id.inptahun)).getText().toString());
         double rating = Double.parseDouble(((Spinner)findViewById(R.id.pilihrating)).getSelectedItem().toString());
