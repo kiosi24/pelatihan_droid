@@ -39,15 +39,15 @@ public class Transaksi implements BaseColumns {
     public static final String TABLE_NAME = "transaksi";
     public static final String COL_NAMA = "nama";
     public static final String COL_JENIS = "type";
-    private static final String COL_JUMLAH = "amount";
+    public static final String COL_JUMLAH = "amount";
     public static final String COL_KETERANGAN = "keterangan";
 
     /*query pembuatan dan penghapusan tabel */
-    public static final String SQL_CREATE = "create table"+TABLE_NAME
-                    +" ("+_ID+" integer primary_key"
+    public static final String SQL_CREATE = "create table "+TABLE_NAME
+                    +" ("+_ID+" integer primary_key,"
                     +" "+COL_NAMA+" text,"
                     +" "+COL_JENIS+" integer,"
                     +" "+COL_JUMLAH+" integer,"
-                    +" "+COL_KETERANGAN+" text";
-    public static final String SQL_DELETE = "delete table if exists "+TABLE_NAME;
+                    +" "+COL_KETERANGAN+" text)";
+    public static final String SQL_DELETE = "drop table if exists "+TABLE_NAME;
 }
