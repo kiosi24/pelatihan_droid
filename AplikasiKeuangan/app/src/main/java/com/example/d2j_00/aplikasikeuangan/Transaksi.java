@@ -2,10 +2,12 @@ package com.example.d2j_00.aplikasikeuangan;
 
 import android.provider.BaseColumns;
 
+import java.io.Serializable;
+
 /**
  * Created by D2J-00 on 13/02/2017.
  */
-public class Transaksi implements BaseColumns {
+public class Transaksi implements BaseColumns, Serializable{
 
     public String nama; //nama transaksi
     public int jenis; // 1 = pemasukan 2= pengeluaran
@@ -42,7 +44,7 @@ public class Transaksi implements BaseColumns {
     public static final String COL_JUMLAH = "amount";
     public static final String COL_KETERANGAN = "keterangan";
 
-    /*query pembuatan dan penghapusan tabel */
+    /* query pembuatan dan penghapusan tabel */
     public static final String SQL_CREATE = "create table "+TABLE_NAME
                     +" ("+_ID+" integer primary_key,"
                     +" "+COL_NAMA+" text,"

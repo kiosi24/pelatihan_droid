@@ -55,4 +55,12 @@
         android:id="@+id/ket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/saveTransaksi"
+        android:textSize="20dp"
+        android:text="Tambah Transaksi"
+        android:onClick="saveTransaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

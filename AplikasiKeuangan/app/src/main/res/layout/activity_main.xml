@@ -11,18 +11,24 @@
     tools:context="com.example.d2j_00.aplikasikeuangan.MainActivity">
 
     <TextView
-        android:id="@+id/hello"
+        android:id="@+id/txt_saldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Sisa Saldo" />
 
     <Button
         android:id="@+id/tambah"
-        android:textSize="20dp"
-        android:layout_below="@+id/hello"
         android:text="Tambah Transaksi"
         android:onClick="tambah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_trasaksi">
+    </ListView>
 
 </LinearLayout>

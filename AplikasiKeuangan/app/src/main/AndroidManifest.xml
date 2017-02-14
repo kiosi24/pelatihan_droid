@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".form_transaksi"></activity>
+        <activity android:name=".form_transaksi" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>
