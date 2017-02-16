@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_total"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:stretchColumns="0"
+    tools:context="com.example.d2j_00.daftarharga.TotalActivity">
+
+
+    <TableRow>
+        <TextView
+            android:text="Honda"/>
+        <TextView
+            android:id="@+id/hon2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/hon2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Yamaha"/>
+        <TextView
+            android:id="@+id/yam2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/yam2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Suzuki"/>
+        <TextView
+            android:id="@+id/suz2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/suz2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Kawasaki"/>
+        <TextView
+            android:id="@+id/kaw2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/kaw2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Ducati"/>
+        <TextView
+            android:id="@+id/duc2_num"
+            android:text="x 0"
+            android:paddingRight="20dp"/>
+        <TextView
+            android:id="@+id/duc2_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"/>
+    </TableRow>
+
+    <TableRow
+        android:background="@color/colorAccent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Total Pembelian"
+            android:layout_span="2"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/grand_total"
+            android:width="100dp"
+            android:gravity="right"
+            android:text="5000000"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+    </TableRow>
+</TableLayout>

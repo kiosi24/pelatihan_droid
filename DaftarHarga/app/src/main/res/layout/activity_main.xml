@@ -16,13 +16,31 @@
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
         android:textSize="25dp"
-        android:text="Pembelian Motor" />
+        android:text="Jual Beli Motor" />
 
     <Button
         android:id="@+id/tambah"
-        android:text="Tambah Transaksi"
+        android:text="Input Pembelian"
         android:onClick="tambah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Total Pembelian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="printReceipt"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Yang Di Beli"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_trasaksi">
+    </ListView>
 
 </LinearLayout>
