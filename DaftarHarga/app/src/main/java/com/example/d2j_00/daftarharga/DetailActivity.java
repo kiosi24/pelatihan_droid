@@ -17,7 +17,8 @@ public class DetailActivity extends AppCompatActivity {
 
         ((TextView)findViewById(R.id.det_name)).setText(transaksi.nama);
         ((TextView)findViewById(R.id.det_jenis)).setText(transaksi.getJenis());
+        ((TextView)findViewById(R.id.det_harga)).setText(Integer.toString(transaksi.harga));
         ((TextView)findViewById(R.id.det_unit)).setText(Integer.toString(transaksi.unit));
-        ((TextView)findViewById(R.id.det_keterangan)).setText(transaksi.keterangan);
+        ((TextView)findViewById(R.id.det_total)).setText(Integer.toString(transaksi.total));
     }
 }

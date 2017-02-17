@@ -15,7 +15,7 @@ import java.util.List;
 public class TransaksiHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "pembelian.db";
-    public static final int DB_VERSION = 2;
+    public static final int DB_VERSION = 3;
 
     SQLiteDatabase db;
 
@@ -34,15 +34,14 @@ public class TransaksiHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void insertTransaksi(String nama, int jenis, int unit, String keterangan){
+    public void insertTransaksi(String nama, int jenis,int harga, int unit, int total){
         db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Transaksi.COL_NAMA, nama);
         values.put(Transaksi.COL_JENIS, jenis);
-        values.put(Transaksi.COL_JUMLAH, unit);
-        if (keterangan == null)
-            keterangan = "";
-        values.put(Transaksi.COL_KETERANGAN, keterangan);
+        values.put(Transaksi.COL_HARGA, harga);
+        values.put(Transaksi.COL_UNIT, unit);
+        values.put(Transaksi.COL_TOTAL, total);
 
         db.insert(Transaksi.TABLE_NAME, null, values);
     }
@@ -50,8 +49,8 @@ public class TransaksiHelper extends SQLiteOpenHelper {
     public List<Transaksi> getTransaksi(){
         db = getReadableDatabase();
         List<Transaksi> transaksi = new ArrayList<>();
-        String [] projection = {Transaksi._ID, Transaksi.COL_NAMA, Transaksi.COL_JENIS,
-                Transaksi.COL_JUMLAH, Transaksi.COL_KETERANGAN};
+        String [] projection = {Transaksi._ID, Transaksi.COL_NAMA, Transaksi.COL_JENIS,Transaksi.COL_HARGA,
+                Transaksi.COL_UNIT, Transaksi.COL_TOTAL};
         String sortOrder = Transaksi._ID;
 
         Cursor cursor = db.query(Transaksi.TABLE_NAME, projection,null, null, null, null, sortOrder);
@@ -61,8 +60,9 @@ public class TransaksiHelper extends SQLiteOpenHelper {
             newTrans = new Transaksi(
                     cursor.getString(cursor.getColumnIndex(Transaksi.COL_NAMA)),
                     cursor.getInt(cursor.getColumnIndex(Transaksi.COL_JENIS)),
-                    cursor.getInt(cursor.getColumnIndex(Transaksi.COL_JUMLAH)),
-                    cursor.getString(cursor.getColumnIndex(Transaksi.COL_KETERANGAN))
+                    cursor.getInt(cursor.getColumnIndex(Transaksi.COL_HARGA)),
+                    cursor.getInt(cursor.getColumnIndex(Transaksi.COL_UNIT)),
+                    cursor.getInt(cursor.getColumnIndex(Transaksi.COL_TOTAL))
             );
 
             transaksi.add(newTrans);
@@ -71,5 +71,6 @@ public class TransaksiHelper extends SQLiteOpenHelper {
 
         return transaksi;
     }
+
 
 }

@@ -3,9 +3,13 @@ package com.example.d2j_00.daftarharga;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class TotalActivity extends AppCompatActivity {
 
@@ -13,31 +17,36 @@ public class TotalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_total);
-        Intent intent = getIntent();
-        // int [] num_barang = new int[6];
-        ArrayList<Integer> num_barang = new ArrayList<>();
-        num_barang = (ArrayList<Integer>) intent.getSerializableExtra("main.barang.num");
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        int [] harga_barang = new int[5];
-        harga_barang[0] = 3000000;
-        harga_barang[1] = 4000000;
-        harga_barang[2] = 1000000;
-        harga_barang[3] = 2000000;
-        harga_barang[4] = 5000000;
+        final ListView listTransaksi = (ListView) findViewById(R.id.list_trasaksi);
+        TransaksiHelper dbHelper = new TransaksiHelper(this);
+        final List<Transaksi> listTrans = dbHelper.getTransaksi();
 
-        int [] id_num = {R.id.hon2_num,R.id.yam2_num,R.id.suz2_num,
-                R.id.kaw2_num,R.id.duc2_num};
-        int [] id_total = {R.id.hon2_total,R.id.yam2_total,R.id.suz2_total,
-                R.id.kaw2_total,R.id.duc2_total};
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTrans);
+        listTransaksi.setAdapter(adapter);
 
         int total = 0;
-        for(int i = 0; i < 5;i ++){
-            total += harga_barang[i] * num_barang.get(i);
-            ((TextView) findViewById(id_num[i])).setText(Integer.toString(num_barang.get(i)));
-            ((TextView) findViewById(id_total[i])).setText(Integer.toString(num_barang.get(i) * harga_barang[i]));
+        for (int i = 0;i<listTrans.size();i++) {
+            total += listTrans.get(i).total;
         }
 
-        ((TextView) findViewById(R.id.grand_total)).setText(Integer.toString(total));
+        TextView txtTotal = (TextView) findViewById(R.id.total);
+        txtTotal.setText("Total Penjualan : "+Integer.toString(total));
+
+
+        listTransaksi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Transaksi transaksi = listTrans.get(position);
+                Intent intent = new Intent(parent.getContext(), DetailActivity.class);
+                intent.putExtra("transaksi.detail", transaksi);
+                startActivity(intent);
+            }
+        });
     }
 }

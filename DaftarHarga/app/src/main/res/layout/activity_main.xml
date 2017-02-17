@@ -8,7 +8,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.d2j_00.daftarharga.MainActivity">
+    tools:context="com.example.d2j_00.daftarharga.MainActivity"
+    android:weightSum="1"
+    android:background="@drawable/wallpaper">
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,21 +28,18 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/list_trasaksi"
         android:text="Total Pembelian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="printReceipt"/>
+        android:onClick="tampil"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Daftar Yang Di Beli"
-        android:textSize="24dp"
-        android:textStyle="bold"/>
-    <ListView
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="307dp"
         android:layout_height="match_parent"
-        android:id="@+id/list_trasaksi">
-    </ListView>
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
 
 </LinearLayout>
